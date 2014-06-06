@@ -34,7 +34,7 @@ exec dbms_workload_repository.modify_snapshot_settings ( interval => 30, retenti
 
 
 -
-- View taken snapshot (util when you want to delete a range)
+- View taken snapshot (useful when you want to delete a range)
 -
 SELECT snap_id, begin_interval_time, end_interval_time 
 FROM SYS.WRM$_SNAPSHOT WHERE snap_id = ( SELECT MIN (snap_id)
