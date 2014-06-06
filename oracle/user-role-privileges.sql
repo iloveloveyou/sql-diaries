@@ -1,10 +1,12 @@
 --
 --  Roles and privileges granted to a user
 --
+--  Tested on: 11g
+--
 
-SELECT lpad(' ', 2*LEVEL) || granted_role "The user, her roles and privileges" FROM
+SELECT lpad(' ', 2*LEVEL) || granted_role "Roles and privileges" FROM
     (
-        SELECT NULL grantee, username granted_role FROM dba_users WHERE username = upper('MYUSER')
+        SELECT NULL grantee, username granted_role FROM dba_users WHERE username = upper('user')
         UNION
         SELECT grantee, granted_role FROM dba_role_privs
         UNION
