@@ -1,0 +1,26 @@
+-- 
+-- Create, replace and disable trigger in order to generate a full trace of a particular user
+-- 
+-- Tested on: 10g, 11g
+--
+
+-- CREATE
+CREATE OR REPLACE TRIGGER <name_of_trigger>
+AFTER LOGON ON DATABASE
+BEGIN
+    IF USER = 'username'
+  THEN
+  execute immediate 'alter session set timed_statistics=true';
+  execute immediate 'alter session set max_dump_file_size=unlimited';
+  execute immediate 'alter session set tracefile_identifier=<pattern to identify trace log>';
+  execute immediate 'alter session set events ''10046 trace name context forever, level 12''';
+   END IF;
+EXCEPTION
+WHEN OTHERS THEN
+NULL;
+END;
+/
+
+-- DISABLE
+ALTER TRIGGER <name_of_trigger> DISABLE;
+
