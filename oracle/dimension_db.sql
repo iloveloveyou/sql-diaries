@@ -5,18 +5,6 @@
 --
 
 
-1)
-
-SELECT   d.tablespace_name, SUM (d.BYTES) / 1024 / 1024 / 1024 total_G,
-         NVL (SUM (f.BYTES) / 1024 / 1024  / 1024, 0) total_G_free,
-         (SUM (d.BYTES) - NVL (SUM (f.BYTES), 0)) / 1024 / 1024 / 1024 total_G_used
-    FROM SYS.dba_data_files d, SYS.dba_free_space f
-   WHERE d.tablespace_name = f.tablespace_name(+)
-GROUP BY d.tablespace_name;
-
-
-2)
-
 set pagesize 2000
 column dummy noprint
 column aplicacio     format a22      heading "Aplicaci"
