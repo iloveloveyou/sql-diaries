@@ -1,7 +1,7 @@
 --
 --  Log file switches, day by day, hour by hour
 --
---  Tested on: 10g, 11g
+--  Tested on: 10g
 --
 
 
@@ -34,7 +34,7 @@ set lines 130
 set pages 100
 
 SELECT
-	to_char(first_time,'YYYY-MON-DD') day,
+	to_char(first_time,'YYYY-MM-DD') day,
 	to_char(sum(decode(to_char(first_time,'HH24'),'00',1,0)),'999') "00",
 	to_char(sum(decode(to_char(first_time,'HH24'),'01',1,0)),'999') "01",
 	to_char(sum(decode(to_char(first_time,'HH24'),'02',1,0)),'999') "02",
@@ -60,5 +60,5 @@ SELECT
 	to_char(sum(decode(to_char(first_time,'HH24'),'22',1,0)),'999') "22",
 	to_char(sum(decode(to_char(first_time,'HH24'),'23',1,0)),'999') "23"
 FROM v$log_history
-GROUP BY to_char(first_time,'YYYY-MON-DD')
-ORDER BY to_char(first_time,'YYYY-MON-DD') DESC;
+GROUP BY to_char(first_time,'YYYY-MM-DD')
+ORDER BY to_char(first_time,'YYYY-MM-DD');
