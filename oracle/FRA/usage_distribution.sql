@@ -1,5 +1,8 @@
-
-
+-- 
+-- Distribution of usage in recovery destination
+-- 
+-- Tested on: 10g, 11g
+--
 
 
 -- natural number
