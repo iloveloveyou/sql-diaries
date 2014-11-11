@@ -1,4 +1,8 @@
-
+-- 
+-- Queries to list, create and extend TEMPShort description
+-- 
+-- @tested on: 11g, 10g
+--
 
 
 -- List temp files
