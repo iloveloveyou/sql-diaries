@@ -1,7 +1,8 @@
--
--
--
--
+-- 
+-- Queries to view TEMP tablespace size
+-- 
+-- @tested on: 11g, 10g
+--
 SET PAGESIZE 60
 SET LINESIZE 300
  
