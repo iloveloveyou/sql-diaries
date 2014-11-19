@@ -3,7 +3,7 @@
 -- 
 -- @tested on: 11g, 10g
 --
-
+-- views: V$TEMPSEG_USAGE
 
 -- List temp files
 set line 200
