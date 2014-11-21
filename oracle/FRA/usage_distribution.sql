@@ -4,7 +4,8 @@
 -- Tested on: 10g, 11g
 --
 
-
+-- Short info about ARCH
+archive log list;
 -- natural number
 set line 200
 col name format a50
