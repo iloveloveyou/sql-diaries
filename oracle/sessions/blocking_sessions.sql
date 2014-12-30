@@ -1,10 +1,10 @@
 --
---   Blocking sessions.  Show WHO is blocking to
+--  Blocking sessions
 --
---   @tested on: 10g, 11g, 12g
+--  @tested on: 10g, 11g, 12g
 --
 
-- query 1
+--  query 1
 
 select l1.sid, ' IS BLOCKING ', l2.sid
 from v$lock l1, v$lock l2
@@ -13,7 +13,7 @@ and l1.id1=l2.id1
 and l1.id2=l2.id2;
 
 
-- query 2
+--  query 2
 
 select s1.username || '@' || s1.machine
 || ' ( SID=' || s1.sid || ' )  is blocking '
