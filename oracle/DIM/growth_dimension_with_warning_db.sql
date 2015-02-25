@@ -62,11 +62,11 @@ order by Status asc, "Dif_1h" desc,"Dif_1d" desc,"Dif_1s" desc, "Dif_1m" desc;
 
 -- example output
 
-TSNAME                      GB_TSIZE   GB_TUSED   GB_TFREE     Dif_1h     Dif_1d     Dif_1s     Dif_1m %Used      %Proy_1s   %Proy_1m   STATUS
-------------------------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- --------
-XXXXXXXXXXXX                    2.98        2.8        .18          0          0          0          0 94%        94%        94%        CRITICAL
-SYSTEM                          2.93       1.04       1.89          0        .01        .01        .02 36%        36%        36%        NORMAL
-YYYYYYYYYYYY                      .2        .03        .16          0          0          0          0 16%        16%        16%        NORMAL
-USERS                              0          0          0          0          0          0          0 26%        26%        26%        NORMAL
+TSNAME   GB_TSIZE   GB_TUSED   GB_TFREE Dif_1h     Dif_1d     Dif_1s     Dif_1m %Used      %Proy_1s   %Proy_1m   STATUS
+------   -------- ---------- ---------- ------ ---------- ---------- ---------- ---------- ---------- ---------- --------
+XXXXXX   2.98      2.8        .18          0          0          0          0 94%        94%        94%        CRITICAL
+SYSTEM   2.93     1.04       1.89          0        .01        .01        .02 36%        36%        36%        NORMAL
+YYYYYY     .2      .03        .16          0          0          0          0 16%        16%        16%        NORMAL
+USERS       0        0          0          0          0          0          0 26%        26%        26%        NORMAL
 
 ----
