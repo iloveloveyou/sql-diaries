@@ -39,7 +39,7 @@ BEGIN
             FROM TABLE(DBMS_WORKLOAD_REPOSITORY.AWR_REPORT_TEXT(l_dbid, l_inst_num, l_bid, l_eid, l_options)) t
     )
     LOOP
-        PIPE ROW (awrrpt_text_type (c.output));
+        PIPE ROW(awrrpt_text_type (c.output));
     END LOOP;
 END;
 /
