@@ -1,4 +1,8 @@
-
+--
+--   Average REDO log applied for GAP analysis
+--
+--   @tested on: 10g
+--
 
 
 
